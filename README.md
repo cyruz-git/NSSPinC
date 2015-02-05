@@ -12,7 +12,7 @@
 
 The build archive is [here on GitHub](https://github.com/cyruz-git/NSSPinC/releases).
 
-### Source files
+### Files
 
 Name | Description
 -----|------------
