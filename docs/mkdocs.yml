@@ -1,0 +1,7 @@
+site_name: NSSPinC - Not So Sucky Pinboard Client
+site_author: Ciro Principe
+repo_url: https://github.com/cyruz-git/nsspinc
+pages:
+- ['index.md', 'README']
+theme: united
+markdown_extensions: [attr_list]
