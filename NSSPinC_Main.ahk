@@ -4,8 +4,9 @@
 ; File .........: NSSPinC_Main.ahk - Main file, manage configuration.
 ; AHK Version ..: AHK_L 1.1.19.01 x32/64 Unicode
 ; Author .......: Cyruz - http://ciroprincipe.info
-; Changelog ....: Nov. 27, 2013 - v0.1 - First revision.
-; ..............: Feb. 05, 2015 - v0.2 - Code refactoring, including resources, revised caching system. Added Gui menu.
+; Changelog ....: Nov. 27, 2013 - v0.1   - First revision.
+; ..............: Feb. 05, 2015 - v0.2   - Code refactoring, included resources, revised caching system, added GUI menu.
+; ..............: Feb. 05, 2015 - v0.2.1 - Solved "status icon not appearing in the view bookmark window" bug.
 ; License ......: GNU Lesser General Public License
 ; ..............: This program is free software: you can redistribute it and/or modify it under the terms of the GNU
 ; ..............: Lesser General Public License as published by the Free Software Foundation, either version 3 of the

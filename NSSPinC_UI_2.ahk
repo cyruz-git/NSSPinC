@@ -25,9 +25,18 @@
     sLabel := ((objSelected.shared != "no") ? "Public - " : "Private - ")
            .  ((FileExist(CACHE_DIR "\" objSelected.hash)) ? "Cached" : "Not Cached")
 
-    Gui, 2: Add, Picture, w16 h-1 x5 y+-16 v2PIC_A AltSubmit, %RESOURCES_DIR%\icon_%nIcon%.ico
+    If ( A_IsCompiled )
+    {
+        Gui, 2:Add, Text, w16 h16 x5 y+-16 +0xE hwnd2TEXT_A_HWND
+        szData  := 0, pData := UpdRes_LockResource("RESOURCES\ICON_" nIcon ".ICO", 10, szData)
+        hBitmap := BinGet_Bitmap(pData, szData)
+        SendMessage, 0x172, 0, hBitmap,, ahk_id %2TEXT_A_HWND% ; 0x172 = STM_SETIMAGE, 0 = IMAGE_BITMAP
+        GuiControl, 1:Move, %2TEXT_A_HWND%, w16 h16
+    }
+    Else
+        Gui, 2: Add, Picture, w16 h-1 x5 y+-16 v2PIC_A AltSubmit, %RESOURCES_DIR%\icon_%nIcon%.ico
+    
     Gui, 2: Add, Text,    x+2 y+-12 v2TEXT_A, %sLabel%
-
     Gui, 2: Font
     Gui, 2: Show, AutoSize x%POSX_2% y%POSY_2%, % SCRIPTNAME " - " objSelected.hash
     Postmessage, 0x00B1, 0, 0, 2EDIT_A, ahk_id %2GUI_HWND% ; Remove selection from edit field (put cursor on 1st char).
