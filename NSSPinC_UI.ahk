@@ -91,7 +91,7 @@ hImageList := IL_Create(RESOURCES_TOTAL)
 Loop, %RESOURCES_TOTAL%
 {
     If ( A_IsCompiled )
-        adrBuf := UpdRes_LockResource("RESOURCES\ICON_" A_Index ".ICO", 10, 0)
+        adrBuf := UpdRes_LockResource(0, "RES\ICON_" A_Index ".ICO", 10, 0)
       , DllCall( "Comctl32.dll\ImageList_ReplaceIcon", Ptr,hImageList, Int,-1, Ptr,hIcon:=BinGet_Icon(adrBuf,16) )
       , DllCall( "CloseHandle", Ptr,hIcon )
     Else
@@ -129,7 +129,7 @@ ABOUT:
     Gui, +OwnDialogs
     MsgBox, 0x40, %SCRIPTNAME%,
     ( LTrim
-        %SCRIPTLINE% :: v%SCRIPTVERSION%
+        %SCRIPTLINE% - %SCRIPTVERSION%
                 
         Project:`thttps://github.com/cyruz-git/NSSPinC
         Forum:`thttp://ahkscript.org/boards/viewtopic.php?f=6&t=
@@ -199,14 +199,14 @@ COPYURL:
 ;COPYURL
 
 DUMMY:
-    FileInstall, Resources\icon_1.ico, DUMMY
-    FileInstall, Resources\icon_2.ico, DUMMY
-    FileInstall, Resources\icon_3.ico, DUMMY
-    FileInstall, Resources\icon_4.ico, DUMMY
-    FileInstall, Resources\icon_5.ico, DUMMY
-    FileInstall, Resources\icon_6.ico, DUMMY
-    FileInstall, Resources\icon_7.ico, DUMMY
-    FileInstall, Resources\icon_8.ico, DUMMY
+    FileInstall, res\icon_1.ico, DUMMY
+    FileInstall, res\icon_2.ico, DUMMY
+    FileInstall, res\icon_3.ico, DUMMY
+    FileInstall, res\icon_4.ico, DUMMY
+    FileInstall, res\icon_5.ico, DUMMY
+    FileInstall, res\icon_6.ico, DUMMY
+    FileInstall, res\icon_7.ico, DUMMY
+    FileInstall, res\icon_8.ico, DUMMY
     Return
 ;DUMMY
 

@@ -32,8 +32,8 @@
 
 SCRIPTNAME      := "NSSPinC"
 SCRIPTLINE      := SCRIPTNAME " - Not So Sucky Pinboard Client"
-SCRIPTVERSION   := "0.2.0"
-RESOURCES_DIR   := A_ScriptDir "\Resources"
+SCRIPTVERSION   := "0.2.1"
+RESOURCES_DIR   := A_ScriptDir "\res"
 RESOURCES_TOTAL := 8
 HELP_FILENAME   := A_ScriptDir "\Readme.html"
 INI_FILENAME    := A_ScriptDir "\" SCRIPTNAME ".ini"

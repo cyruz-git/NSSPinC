@@ -17,7 +17,7 @@ The build archive is [here on GitHub](https://github.com/cyruz-git/NSSPinC/relea
 Name | Description
 -----|------------
 docs\ | Folder containing the documentation, built with MkDocs.
-Resources\ | Folder containing icon resources.
+res\ | Folder containing icon resources.
 Tools\ | Folder containing caching required tools and wkhtmltox utilities.
 COPYING | GNU General Public License.
 COPYING.LESSER | GNU Lesser General Public License.
